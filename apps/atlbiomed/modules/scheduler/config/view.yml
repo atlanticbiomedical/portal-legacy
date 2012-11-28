@@ -1,0 +1,11 @@
+techMapSuccess:
+  javascripts: [%SF_PROTOTYPE_WEB_DIR%/js/prototype]
+  layout: techMap
+indexSuccess:
+  javascripts: [/js/scheduler]
+  stylesheets: [/css/email.css]
+sendEmailSuccess:
+  has_layout: off
+  javascripts: [/js/scheduler]
+  stylesheets: [/css/email.css]
+

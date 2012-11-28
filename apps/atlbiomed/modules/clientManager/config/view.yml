@@ -1,0 +1,4 @@
+indexSuccess:
+  stylesheets: [/css/clientManager]
+  javascripts: [/js/clientManager, /js/scriptaculous/lib/prototype]
+  

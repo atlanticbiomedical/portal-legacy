@@ -1,0 +1,11 @@
+generateReportSuccess:
+  layout: no
+listDevicesSuccess:
+  layout: no
+deviceIdChangedSuccess:
+  layout: no
+getDevicesSuccess:
+  layout: no
+all:
+  stylesheets:  [process]
+  javascripts:  [scriptaculous/lib/prototype, process]

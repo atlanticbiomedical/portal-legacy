@@ -1,0 +1,27 @@
+
+Dropdown:
+  admin:
+    menu: role
+    value: Administrator
+  office:
+    menu: role
+    value: Office
+  tech:
+    menu: role
+    value: Technician
+  client:
+    menu: role
+    value: Client
+
+  date:
+    menu: workOrderSearchBy
+    value: Date
+  client:
+    menu: workOrderSearchBy
+    value: Client
+  technician:
+    menu: workOrderSearchBy
+    value: Technician
+  status:
+    menu: workOrderSearchBy
+    value: Status

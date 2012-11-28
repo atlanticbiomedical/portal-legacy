@@ -1,0 +1,380 @@
+---
+propel: 
+  workorder_type:
+    id:
+    type_name:
+      type: varchar
+      size: 50
+      required: true
+      default: <null>
+      index: unique
+    created_at:
+    updated_at:
+    
+  job_type:
+    id:
+    type_name:
+      type: varchar
+      size: 50
+      required: true;
+      default: <null>
+      index: unique
+    created_at:
+    updated_at:
+    
+  job_status:
+    id:
+    status_name:
+      type: varchar
+      size: 50
+      required: true
+      default: <null>
+      index: unique
+    workorder_type_id:
+    created_at:
+    updated_at:
+
+  user_type:
+    id:
+    type_name:
+      type: varchar
+      size: 50
+      required: true
+      default: <null>
+      index: unique
+    created_at:
+    updated_at:
+    
+  client: 
+    id: 
+    location_id: 
+    client_identification: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    client_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    address: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    address_2: 
+      type: VARCHAR
+      size: 50
+      default: <null>
+    city: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    state: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    zip: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    attn: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    email: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    phone: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    ext: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    category: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    notes: 
+      type: VARCHAR
+      size: 50
+      default: <null>
+    all_devices:
+      type: integer
+      required: false
+    frequency:
+      type: blob
+      required: false
+    created_at:
+    updated_at:
+        
+  device: 
+    id: 
+    specification_id: 
+    client_id: 
+    identification:
+      type: varchar
+      size: 50
+      required: false
+      default: <null>
+    serial_number: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    location: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    frequency: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    status: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    created_at:
+    updated_at:
+    _uniques: 
+      my_index: 
+        - specification_id
+        - serial_number
+
+  dropdown: 
+    id: 
+    menu: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    value: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    created_at:
+    updated_at:
+      
+  location: 
+    id: 
+    latitude: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    longitude: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    created_at:
+    updated_at:
+    _uniques: 
+      idxLatLong: 
+        - latitude
+        - longitude
+
+  specification: 
+    id: 
+    device_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    manufacturer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    model_number: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    created_at:
+    updated_at:
+    _uniques: 
+      my_index: 
+        - manufacturer
+        - model_number
+  user: 
+    id: 
+    user_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+      index: unique;
+    first_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    last_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    email: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    phone: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    address: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    address_2: 
+      type: VARCHAR
+      size: 50
+      default: <null>
+    location_id: 
+    city: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    state: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    zip: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    password: 
+      type: VARCHAR
+      size: 64
+      required: true
+      default: <null>
+    user_type_id:
+    start_time: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    end_time: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    created_at:
+    updated_at:
+
+  workorder: 
+    id: 
+    device_id: 
+    client_id: 
+    tech: 
+      type: INTEGER
+    office: 
+      type: INTEGER
+    job_status_id:
+    page_number: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    travel_time: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    onsite_time: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    zip: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    date_recieved: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    date_completed: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    workorder_type_id: 
+    job_type_id: 
+    job_status_id:
+    invoice: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    reason: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    action_taken: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    remarks: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    job_date: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    job_start: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    job_end: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    created_at:
+    updated_at:
+  
+  qualifications:
+    id:
+    user_id:
+    device_id:
+    created_at:
+    updated_at:
+	
+  workorder_tech:
+    id:
+    workorder_id:
+    user_id:
+    created_at:
+    updated_at:

@@ -1,0 +1,142 @@
+User:
+  nick:
+    user_name: NHepner
+    first_name: Nicholas
+    last_name: Hepner
+    email: nicholas.hepner@ciphent.com
+    phone: 4438835933
+    address: 1026 Spa Rd
+    address2: 
+    city: Annapolis
+    state: MD
+    zip: 21403
+    password: 1qwert
+    user_type: Office
+    start_time:	0800
+    end_time: 1700
+
+  kevin:
+    user_name: KHarriford
+    first_name: Kevin
+    last_name: Harriford
+    email: kharriford@ciphent.com
+    phone: 4438835933
+    address: 1026 Spa Rd
+    address2: 
+    city: Annapolis
+    state: MD
+    zip: 21403
+    password: 1qwert
+    user_type: Administrator
+    start_time:	0800
+    end_time: 1700
+
+  foster:
+    user_name: JFoster
+    first_name: James
+    last_name: Foster
+    email: foster@ciphent.com
+    phone: 4438835933
+    address: 815 Oregon Avenue
+    address2: 
+    city: Annapolis
+    state: MD
+    zip: 21403
+    password: 1qwert
+    user_type: Office
+    start_time:	0800
+    end_time: 1700
+
+Dropdown:
+  admin:
+    menu: role
+    value: Administrator
+  office:
+    menu: role
+    value: Office
+  tech:
+    menu: role
+    value: Technician
+  client:
+    menu: role
+    value: Client
+
+  date:
+    menu: workOrderSearchBy
+    value: Date
+  client:
+    menu: workOrderSearchBy
+    value: Client
+  technician:
+    menu: workOrderSearchBy
+    value: Technician
+  status:
+    menu: workOrderSearchBy
+    value: Status
+
+  
+Client:
+  novare:
+    client_identification: GLOBAL
+    client_name: Global Novare
+    address: 815 Oregon Ave.
+    city: Linthicum Heights
+    state: MD
+    zip: 22090
+    attn: James Foster
+    email: info@globalnovare.net
+    phone: 3459879345
+    ext: 223
+    category: radiology
+    notes:
+
+  ciphent:
+    client_identification: CIPHENT
+    client_name: CIPHENT
+    address: 815 Oregon Ave.
+    city: Linthicum Heights
+    state: MD
+    zip: 22090
+    attn: James Foster
+    email: info@ciphent.com
+    phone: 3459879345
+    ext: 223
+    category: radiology
+    notes:
+
+Specification:
+  monitor:
+    id:
+    device_name: Color Monitor
+    manufacturer: Sony
+    model_number: CTV-4430
+
+Device:
+  monitor:
+    specification_id: 
+    client_id: 
+    serial_number: 225-3399
+    location: room 228
+    frequency: monthly
+    status: active
+
+Workorder:
+  repair:
+    job_status: Floating
+    tech: 1
+    office: 2
+    travel_time: 45
+    onsite_time: 180
+    zip: 54652
+    date_recieved: Tuesday
+    date_completed: Wednesday
+    workorder_type: scheduled
+    job_type: Repair
+    invoice: 5465
+    reason: Broken gurney wheel
+    action_taken: Replaced wheel, lubricated all wheels
+    remarks: Recommend new gurney at some point, not an immediate priority
+    job_date: 10-26-2007
+    job_start: 1000
+    job_end:1210
+    page_number: 1

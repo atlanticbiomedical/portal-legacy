@@ -1,0 +1,34 @@
+fillin:
+  
+  enabled: true
+
+fields:
+  new_device_name:
+    required:
+      msg: Please enter a device description
+
+  new_manufacturer:
+    required:
+      msg: Please enter a device manufacturer
+
+  new_model_number:
+    required:
+      msg: Please enter a model number
+
+  new_serial_number:
+    required:
+      msg: Please enter a serial number
+
+  new_location:
+    required:
+      msg: Please enter where the device is located 
+
+  new_frequency:
+    required:
+      msg: Please select a maintainance frequency
+
+  new_status:
+    required:
+      msg: Please select a status for the device
+
+

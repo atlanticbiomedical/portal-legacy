@@ -1,0 +1,19 @@
+
+dev:
+  site_images_url: http://portal.atlanticbiomedical.com/images/
+  
+  google:
+    maps_api_key:ABQIAAAAH8eXa0M6ghDzYagwHY4v2hSIy_WAr7UwMnWXIzgcAQul7TtErhSWFvWS5hr8ADs9x3KcyKFHEIyaHQ
+    
+    
+prod:
+#  site_images_url: http://portal.atlanticbiomedical.com/images/
+  site_images_url: http://biomed.wootroot.me/images/
+  
+  google:
+#    maps_api_key: AIzaSyBvoem1A2w23DhZX119IU_nnjn3hCNoLu4
+     maps_api_key: AIzaSyBJhZuTYgvG5q65VgZLgtfbe44Q82Dpl0c
+    
+all:
+  default_map_location: 818 Oregon Avenue Linthicum MD 2109
+  default_map_location_title: Atlantic Biomedical

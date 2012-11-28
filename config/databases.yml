@@ -1,0 +1,30 @@
+#all:
+#  propel:
+#    class:          sfPropelDatabase
+#    param:
+#      dsn:          mysql://root:@localhost/dbname
+
+all:
+  sessions_db:
+    class:          sfPropelDatabase
+    param:
+      dsn:          mysql://root:r00tp@s5@localhost/_atlbiomedprod
+
+  propel:
+    class:      sfPropelDatabase
+    param:
+      phptype:  mysql
+      host:     localhost
+      database: _atlbiomedprod
+      username: root
+      password: r00tp@s5
+
+  atlbio:
+    class:      sfPropelDatabase
+    param:
+      phptype:  mysql
+      host:     localhost
+      database: _atlbiomedprod
+      username: root
+      password: r00tp@s5
+      

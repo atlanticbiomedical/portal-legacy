@@ -1,0 +1,42 @@
+#mainFreqContainer{
+width: 300px;
+height: 200px;
+border: 1px solid red;
+background-color:#4AA7BE;
+display: none;
+}
+#clost_text_cont{
+font-weight:bold;
+text-align: right;
+color: #FFF;
+}
+#clost_text{
+padding: 6px;
+color: #fff;
+}
+A.popLink{
+color: #fff;
+}
+.frequency_table {
+  border-collapse: collapse;
+}
+
+.frequency_header {
+  text-align: center;
+  font-size: 11px;
+}
+
+.frequency_type,
+.frequency_item {
+  font-size: 11px;
+  border-top: 1px solid #DDD;
+}
+
+.frequency_item input {
+  margin: 6px 10px;
+}
+
+.frequency_header.alt,
+.frequency_item.alt {
+  background-color: #EEE;
+}

@@ -1,0 +1,147 @@
+fields:
+  user_name:
+    required:
+      msg:       No user name has been entered. Please enter a user name before continuing.
+    sfStringValidator:
+      min:       5
+      min_error: User name does not meet acceptable parameters. (5 characters minimum)
+      max:       50
+      max_error: User name exceeds acceptable parameters. (50 characters maximum)
+
+  first_name:
+    required:
+      msg:       No first name has been entered. Please enter a first name before continuing.
+    sfStringValidator:
+      min:       2
+	  min_error: First name does not meet acceptable parameters. (2 character minimum)
+      max:       25
+      max_error: First name exceeds acceptable parameters. (25 character maximum)
+
+  last_name:
+    required:
+      msg:       No last name has been entered. Please enter a last name before continuing.
+    sfStringValidator:
+      min:       2
+	  min_error: Last name does not meet acceptable parameters. (2 character minimum)
+      max:       25
+      max_error: Last name exceeds acceptable parameters. (25 character maximum)
+  
+  email:
+    required:
+      msg: No email address has been entered. Please enter an email address before continuing.
+    sfEmailValidator:
+      strict: true
+      email_error: Please enter a valid email address (name@domain.extension)
+
+  verify_email:
+    required:
+      msg: Please verify your email address.
+    sfEmailValidator:
+      strict: true
+    sfCompareValidator:
+	  check: email
+	  compare_error: Your email verification does not match. Please Retype your email.
+
+  phone:
+    required:
+      msg: Please enter a telephone number
+	sfStringValidator:
+      min: 10
+	  min_error: Please enter a valid telephone number. Please include area code. (e.g. 5555555555)
+      max: 15
+	  max_error: Please enter a valid telephone number.
+      
+  address:
+  	required:
+      msg: Please enter an address.
+
+  address_2:
+
+  city:
+    required:
+	  msg: Please enter a city.
+
+  state:
+    required:
+	  msg: Please select a state.
+
+  zip:
+    required:
+      msg: Please enter a zip code.
+	sfStringValidator:
+      min: 5
+	  min_error: You have submitted an incomplete zip code. Please enter a valid zip code.
+	  max: 5
+	  max_error: Please submit a 5-digit zip code.
+
+  password:
+    required:
+      msg: Please enter a password.
+    sfStringValidator:
+	  min: 8
+	  min_error: Password must be more than 8 characters.
+
+  verify_password:
+    required:
+      msg: Please verify your password.
+	sfCompareValidator:
+      check: password
+	  compare_error: Your password verification does not match. Please retype your password.
+
+  user_type:
+    required:
+	  msg: Please select a user type.
+	
+  start_time_hours:
+    required:
+      msg: Please enter a valid start time
+	sfNumberValidator:
+      min: 0
+      min_error: Please enter a valid start time
+	  max: 2
+	  max_error: Please enter a valid start time
+
+  start_time_minutes:
+    required:
+      msg: Please enter a valid start time
+	sfNumberValidator:
+      min: 0
+      min_error: Please enter a valid start time
+	  max: 2
+	  max_error: Please enter a valid start time
+
+  start_time_ampm:
+    required:
+      msg: Please select AM or PM for start time.
+
+  end_time_hours:
+    required:
+      msg: Please enter a valid end time.
+	sfNumberValidator:
+      min: 0
+      min_error: Please enter a valid end time
+	  max: 2
+	  max_error: Please enter a valid end time
+
+  end_time_minutes:
+    required:
+      msg: Please enter a valid end time
+	sfNumberValidator:
+      min: 0
+      min_error: Please enter a valid end time
+	  max: 2
+	  max_error: Please enter a valid end time
+
+  end_time_ampm:
+    required:
+	  msg: Please select AM or PM for end time
+
+fillin:
+  enabled: true
+  param:
+    skip_fields: [validate_email]
+    exclude_types: [password]
+    check_types: [text, radio]
+	converters:
+      htmlentities: [user_name, first_name, last_name, address, address_2, city, zip, password, start_time_hours, start_time_minutes, end_time_hours, end_time_minutes]
+

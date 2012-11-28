@@ -1,0 +1,8 @@
+fields:
+  username:
+    required:
+      msg: Please enter a username.
+
+  password:
+    required:
+      msg: Please enter a password.

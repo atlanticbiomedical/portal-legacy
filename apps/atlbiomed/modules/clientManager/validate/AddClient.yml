@@ -1,0 +1,63 @@
+fillin:
+  enabled: true
+
+fields:
+  client_identification:
+    required:
+      msg:      Please enter a client identification before continuing
+    sfStringValidator:
+
+  client_name:
+    required:
+      msg:      Please enter a client name before continuing
+    sfStringValidator:
+      min: 5
+      min_error: Client name does not meet acceptable parameters (5 character min)
+      max: 50
+      max_error: Clint name exceeds acceptable parameters (50 characters max)
+
+  address:
+    required:
+      msg: Please enter an address.
+
+  city:
+    required:
+      msg: Please enter a city.
+
+  state:
+    required:
+      msg: Please select a state.
+
+  zip:
+    required:
+      msg: Please enter a zip code.
+    sfStringValidator:
+      min: 5
+      min_error: You have submitted an incomplete zip code. Please enter a valid zip code.
+      max: 5
+      max_error: Please submit a 5-digit zip code.
+
+  email:	
+    sfEmailValidator:
+      strict: true	
+      email_error: Please enter a valid email address (name@domain.extension)
+
+  phone:
+    sfStringValidator:
+      min: 12
+      min_error: Please enter a valid telephone number (e.g. 555-555-5555).
+      max: 17
+      max_error: Please enter a valid telephone number.
+
+	  
+  ext:
+    sfStringValidator:
+      max: 5
+      max_error: Please enter a valid extention.
+
+#  freq_month:
+#    required:
+#      msg: Please select month to start maintainence.
+#    sfStringValidator:
+#      min: 2
+#      min_error: Please select a month to start Maintainence.

@@ -1,0 +1,72 @@
+
+
+2009-03-23	826 Washington Road Westminster MD 21157	red	red1	Westminster Surgery Center
+
+
+
+2009-03-23	7704 Quarterfield Road Glen Burnie MD 21061	red	red2	MD Plastic Surgery
+
+
+
+2009-03-23	806 Landmark Drive Glen Burnie MD 21061	red	red3	Chesapeake Urology Associates
+
+
+
+2009-03-23	308 Hospital Drive Glen Burnie MD 21061	red	red4	SurgCenter of Glen Burnie
+
+
+
+2009-03-24	113 Westminster Road Reisterstown MD 21136	blue	blue1	Dr. Michael Kane
+
+
+
+2009-03-24	6504 Kenilworth Ave Riverdale MD 20737	blue	blue2	University Center for Ambulatory surg.
+
+
+
+2009-03-24	1122 Kenilworth Ave Towson MD 21204	blue	blue3	Towson Ent
+
+
+
+2009-03-25	120 Penn Street Baltimore MD 21201	orange	orange1	U of M Womens Health 
+
+
+
+2009-03-25	806 Landmark Drive Glen Burnie MD 21061	orange	orange2	Chesapeake Urology Associates
+
+
+
+2009-03-25	1001 Pine Heights Avenue Baltimore MD 21228	orange	orange3	Chesapeake Urology Associates
+
+
+
+2009-03-25	7704 Quarterfield Road Glen Burnie MD 21061	orange	orange4	MD Plastic Surgery
+
+
+
+2009-03-25	6504 Kenilworth Ave Riverdale MD 20737	orange	orange5	University Center for Ambulatory surg.
+
+
+
+2009-03-26	9101 Franklin Square Dr. Baltimore MD 21237	green	green1	Drs. Poulton & Arci LLC
+
+
+
+2009-03-26	7704 Quarterfield Road Glen Burnie MD 21061	green	green2	MD Plastic Surgery
+
+
+
+2009-03-26	   	green	green3	ATLANTIC BIOMEDICAL
+
+
+
+2009-03-27	7625 Maple Lawn Blvd. FULTON MD 20759	grey	grey1	Maple Lawn SurgCenter
+
+
+
+2009-03-27	955 Chevrolete Drive Ellicott City MD 21043	grey	grey2	Dr. Frederick Pearson
+
+
+
+2009-03-27	13801 York Road Cockeysville MD 21030	grey	grey3	Broadmead,inc.
+

@@ -1,0 +1,731 @@
+---
+propel: 
+  client: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    location_id: 
+    client_identification: 
+      type: VARCHAR
+      size: 50
+    client_name: 
+      type: VARCHAR
+      size: 50
+    address: 
+      type: VARCHAR
+      size: 50
+    address_2: 
+      type: VARCHAR
+      size: 50
+    city: 
+      type: VARCHAR
+      size: 50
+    state: 
+      type: VARCHAR
+      size: 50
+    zip: 
+      type: VARCHAR
+      size: 50
+    attn: 
+      type: VARCHAR
+      size: 50
+    email: 
+      type: VARCHAR
+      size: 50
+    phone: 
+      type: VARCHAR
+      size: 50
+    ext: 
+      type: VARCHAR
+      size: 50
+    category: 
+      type: VARCHAR
+      size: 50
+    notes: 
+      type: VARCHAR
+      size: 50
+    all_devices: 
+      type: INTEGER
+    freq_approved:
+      type: INTEGER
+      default: 0
+    freq_locked:
+      type: INTEGER
+      default: 0
+    created_at: 
+      type: TIMESTAMP
+    updated_at: 
+      type: TIMESTAMP
+    frequency: 
+      type: VARBINARY
+    frequency_annual:
+      type: VARBINARY
+    frequency_semi:
+      type: VARBINARY
+    frequency_quarterly:
+      type: VARBINARY
+    frequency_sterilizer:
+      type: VARBINARY
+    frequency_tg:
+      type: VARBINARY
+    frequency_ert:
+      type: VARBINARY
+    frequency_rae:
+      type: VARBINARY
+    frequency_medgas:
+      type: VARBINARY
+    frequency_imaging:
+      type: VARBINARY
+    frequency_neptune:
+      type: VARBINARY
+    frequency_anesthesia:
+      type: VARBINARY
+    anesthesia: 
+      type: VARCHAR
+      size: 50
+    medgas: 
+      type: VARCHAR
+      size: 50
+    require_coords_update: 
+      type: INTEGER
+      default: 1
+    addressType: 
+      type: INTEGER
+      default: 1
+    secondary_address: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    secondary_address_2: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    secondary_city: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    secondary_state: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    secondary_zip: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    secondary_attn: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    _indexes: 
+      client_Fl_1: 
+        - location_id
+  cordinates: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    client_id: 
+      type: INTEGER
+    lat: 
+      type: DOUBLE
+    lon: 
+      type: DOUBLE
+    found: 
+      type: INTEGER
+      default: 0
+    _indexes: 
+      clientid_indx: 
+        - client_id
+  device: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    specification_id: 
+    client_id: 
+    serial_number: 
+      type: VARCHAR
+      size: 50
+    location: 
+      type: VARCHAR
+      size: 50
+    frequency: 
+      type: VARCHAR
+      size: 50
+    status: 
+      type: VARCHAR
+      size: 50
+    identification: 
+      type: VARCHAR
+      size: 50
+    created_at: 
+      type: TIMESTAMP
+    updated_at: 
+      type: TIMESTAMP
+    comments: 
+      type: VARCHAR
+      size: 300
+    last_pm_date:
+      type: VARCHAR
+      size: 50
+    _uniques: 
+      my_index: 
+        - specification_id
+        - serial_number
+  device_checkup: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    device_id: 
+      type: INTEGER
+    client_id: 
+    device_identification: 
+      type: VARCHAR
+      size: 50
+    row_indicator: 
+      type: VARCHAR
+      size: 50
+    device_tech_id: 
+      type: VARCHAR
+      size: 50
+    pass_fail_code: 
+      type: VARCHAR
+      size: 50
+    rec_number: 
+      type: VARCHAR
+      size: 50
+    row_purpose: 
+      type: VARCHAR
+      size: 50
+    physical_inspection: 
+      type: VARCHAR
+      size: 50
+    room: 
+      type: VARCHAR
+      size: 50
+    time: 
+      type: VARCHAR
+      size: 50
+    date: 
+      type: VARCHAR
+      size: 50
+    pass_fail: 
+      type: VARCHAR
+      size: 50
+  device_test_data: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    device_checkup_id: 
+    name: 
+      type: VARCHAR
+      size: 100
+    type: 
+      type: VARCHAR
+      size: 50
+    value: 
+      type: VARCHAR
+      size: 50
+    passFail: 
+      type: VARCHAR
+      size: 50
+    unit: 
+      type: VARCHAR
+      size: 50
+    _indexes: 
+      device_test_data_FI_1: 
+        - device_checkup_id
+  devices_failed: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    device_id: 
+    report_id: 
+      type: INTEGER
+    client_id: 
+      type: VARCHAR
+      size: 50
+    status: 
+      type: VARCHAR
+      size: 50
+    _indexes: 
+      devices_failed_FI_1: 
+        - device_id
+  devices_files: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    filename: 
+      type: VARCHAR
+      size: 250
+    created_at: 
+      type: TIMESTAMP
+    updated_at: 
+      type: TIMESTAMP
+  distances: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    client_id_1: 
+      type: INTEGER
+    client_id_2: 
+      type: INTEGER
+    travel_time_hours: 
+      type: INTEGER
+    travel_time_mins: 
+      type: INTEGER
+    travel_distance: 
+      type: INTEGER
+    updated_at: 
+      type: TIMESTAMP
+    _indexes: 
+      client1_indx: 
+        - client_id_1
+      client2_indx: 
+        - client_id_2
+  dropdown: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    menu: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    value: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    created_at: 
+      type: TIMESTAMP
+    updated_at: 
+      type: TIMESTAMP
+  final_device_report: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    client_id: 
+      type: VARCHAR
+      size: 50
+    date: 
+      type: VARCHAR
+      size: 50
+    pass_fail: 
+      type: VARCHAR
+      size: 250
+    total_failed: 
+      type: INTEGER
+    total_passed: 
+      type: INTEGER
+    total_bp: 
+      type: INTEGER
+    total_trace: 
+      type: INTEGER
+    total_missed: 
+      type: INTEGER
+    total_outlets:
+      type: INTEGER
+    contact:
+      type: VARCHAR
+      size: 50
+    created_at: 
+      type: TIMESTAMP
+    updated_at: 
+      type: TIMESTAMP
+  job_status: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    status_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    created_at: 
+      type: TIMESTAMP
+    updated_at: 
+      type: TIMESTAMP
+    workorder_type_id: 
+      type: INTEGER
+    _uniques: 
+      job_status_status_name_unique: 
+        - status_name
+  job_type: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    type_name: 
+      type: VARCHAR
+      size: 50
+      default: <null>
+    created_at: 
+      type: TIMESTAMP
+    updated_at: 
+      type: TIMESTAMP
+    _uniques: 
+      job_type_type_name_unique: 
+        - type_name
+  location: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    latitude: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    longitude: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    created_at: 
+      type: TIMESTAMP
+    updated_at: 
+      type: TIMESTAMP
+
+  qualifications: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    user_id: 
+    device_id: 
+    created_at:
+    updated_at:
+    _indexes: 
+      qualifications_FI_1: 
+        - user_id
+      qualifications_FI_2: 
+        - device_id
+
+  specification: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    device_name: 
+      type: VARCHAR
+      size: 50
+    manufacturer: 
+      type: VARCHAR
+      size: 50
+    model_number: 
+      type: VARCHAR
+      size: 50
+    created_at: 
+    updated_at: 
+  tech_distances: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    tech_id: 
+      type: INTEGER
+    client_id: 
+      type: INTEGER
+    travel_time_hours: 
+      type: INTEGER
+    travel_time_mins: 
+      type: INTEGER
+    travel_distance: 
+      type: FLOAT
+    updated_at: 
+
+  unprocessed_devices: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    filename: 
+      type: VARCHAR
+      size: 250
+    device_id: 
+      type: VARCHAR
+      size: 50
+    created_at: 
+    updated_at: 
+    _uniques: 
+      un_filename: 
+        - filename
+        - device_id
+  user: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    user_name: 
+      type: VARCHAR
+      size: 50
+    first_name: 
+      type: VARCHAR
+      size: 50
+    last_name: 
+      type: VARCHAR
+      size: 50
+    email: 
+      type: VARCHAR
+      size: 50
+    phone: 
+      type: VARCHAR
+      size: 50
+    address: 
+      type: VARCHAR
+      size: 50
+    address_2: 
+      type: VARCHAR
+      size: 50
+    city: 
+      type: VARCHAR
+      size: 50
+    state: 
+      type: VARCHAR
+      size: 50
+    zip: 
+      type: VARCHAR
+      size: 50
+    password: 
+      type: VARCHAR
+      size: 64
+    start_time: 
+      type: VARCHAR
+      size: 50
+    end_time: 
+      type: VARCHAR
+      size: 50
+    location_id: 
+      type: INTEGER
+    created_at: 
+      type: TIMESTAMP
+    updated_at: 
+      type: TIMESTAMP
+    user_type_id:
+    weight: 
+      type: INTEGER
+    admin:
+      type: INTEGER
+      default: 0
+    _indexes: 
+      user_user_name_index: 
+        - user_name
+  user_type: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    type_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    created_at: 
+    updated_at: 
+    _uniques: 
+      idxUserTypeName: 
+        - type_name
+  workorder: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    device_id: 
+    client_id: 
+    tech: 
+      type: INTEGER
+    office: 
+      type: INTEGER
+    assigned_by: 
+      type: INTEGER
+    page_number: 
+      type: VARCHAR
+      size: 50
+    travel_time: 
+      type: VARCHAR
+      size: 50
+    onsite_time: 
+      type: VARCHAR
+      size: 50
+    zip: 
+      type: VARCHAR
+      size: 50
+    date_recieved: 
+      type: VARCHAR
+      size: 50
+    date_completed: 
+      type: VARCHAR
+      size: 50
+    invoice: 
+      type: VARCHAR
+      size: 50
+    reason: 
+      type: VARCHAR
+      size: 50
+    action_taken: 
+      type: VARCHAR
+      size: 50
+    remarks: 
+      type: VARCHAR
+      size: 150
+    job_date: 
+      type: VARCHAR
+      size: 50
+    job_start: 
+      type: VARCHAR
+      size: 50
+    job_end: 
+      type: VARCHAR
+      size: 50
+    exact_time: 
+      type: INTEGER
+    sale_tax:
+      type: DOUBLE
+      default: 0
+    zone_charge:
+      type: DOUBLE
+      default: 0
+    shipping_handling:
+      type: DOUBLE
+      default: 0
+    total:
+      type: DOUBLE
+      default: 0
+    service_travel:
+      type: DOUBLE
+      default: 0
+    created_at: 
+      type: TIMESTAMP
+    updated_at: 
+      type: TIMESTAMP
+    job_status_id: 
+    job_type_id: 
+    workorder_type_id: 
+    caller: 
+      type: VARCHAR
+      size: 75
+    job_scheduled_date: 
+      type: VARCHAR
+      size: 50
+    _indexes: 
+      workorder_FI_1: 
+        - device_id
+      workorder_FI_2: 
+        - client_id
+  workorder_tech: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    workorder_id: 
+      type: INTEGER
+    user_id: 
+      type: INTEGER
+    created_at: 
+      type: TIMESTAMP
+    updated_at: 
+      type: TIMESTAMP
+    _indexes: 
+      workorder_tech_FI_1: 
+        - workorder_id
+      workorder_tech_FI_2: 
+        - user_id
+  workorder_type: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    type_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: <null>
+    created_at: 
+      type: TIMESTAMP
+    updated_at: 
+      type: TIMESTAMP
+    _uniques: 
+      workorder_type_type_name_unique: 
+        - type_name

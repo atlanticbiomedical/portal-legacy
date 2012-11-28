@@ -1,0 +1,6 @@
+indexSuccess:
+  javascripts: [%SF_PROTOTYPE_WEB_DIR%/js/prototype]
+  layout: noLayout
+
+secureSuccess:
+  layout: noLayout

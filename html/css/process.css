@@ -1,0 +1,36 @@
+#display_cont{
+	width: 900px;
+	height: 700px;
+        border: 1px solid black;
+}
+.partial_match_column_title{
+	width: 100px;
+	font-size:12px;
+	font-family: arial;
+}
+
+#noMatchTable{
+	margin-top: 0px;
+}
+.regularCont{
+border: 1px solid black;
+margin-top: 10px;
+}
+.innerCont{
+	padding: 0px 7px 7px 7px;
+}
+.titleBar{
+font-weight:bold;
+background-color: #EEF5FB;
+color: #000;
+padding: 3px;
+margin-bottom: 10px;
+}
+.alreadyExist{
+border:1px solid #DD7777;
+background: #FFCCCC;
+padding: 5px;
+text-align:center;
+font-weight:bold;
+font-size: 13px;
+}

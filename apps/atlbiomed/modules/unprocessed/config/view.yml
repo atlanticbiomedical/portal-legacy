@@ -1,0 +1,3 @@
+all:
+  stylesheets:  [process]
+  javascripts:  [scriptaculous/lib/prototype, process]
